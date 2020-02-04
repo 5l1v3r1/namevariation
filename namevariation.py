@@ -1,14 +1,14 @@
-first = input("What is the first name? ")
-middle = input("What is the middle name? ")
-last = input("What is the last name? ")
+first = input("What is the first name? ") + " "
+middle = input("What is the middle name? ") + " "
+last = input("What is the last name? ") + " "
 
-first_initial = first[0]
-middle_initial = middle[0]
-last_initial = last[0]
+first_initial = first[0] + " "
+middle_initial = middle[0] + " "
+last_initial = last[0] + " "
 
-first_initial_period = first_initial
-middle_initial_period = middle_initial
-last_initial_period = last_initial
+first_initial_period = first_initial + " "
+middle_initial_period = middle_initial + " "
+last_initial_period = last_initial + " "
 
 name_list = [
 first + middle + last,
@@ -62,9 +62,9 @@ last_initial + middle_initial + first_initial,
 ]
 
 print(*name_list, sep="\n")
-with open("names.csv", 'w') as output:
+with open("namevariation.csv", 'w') as output:
     for row in name_list:
         output.write(str(row) + '\n')
-with open("names.txt", 'w') as output:
+with open("namevariation.txt", 'w') as output:
     for row in name_list:
         output.write(str(row) + '\n')
